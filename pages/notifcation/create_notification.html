@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Create Project</title>
+  <title>Create Notifications</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -192,17 +192,17 @@
           </ul>
         </li>
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Notifications</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="create_notification.html"><i class="fa fa-circle-o"></i>List Notifications</a></li>
-            <li><a href="list_notification.html"><i class="fa fa-circle-o"></i> Create Notifications</a></li>
-          </ul>
-        </li>
+            <a href="#">
+              <i class="fa fa-dashboard"></i> <span>Notifications</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="create_notification.html"><i class="fa fa-circle-o"></i>List Notifications</a></li>
+              <li><a href="list_notification.html"><i class="fa fa-circle-o"></i> Create Notifications</a></li>
+            </ul>
+          </li>
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -213,7 +213,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Tạo dự án
+        Tạo thông báo
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -234,11 +234,11 @@
             <form role="form">
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Tên dự án</label>
+                        <label for="exampleInputEmail1">Tiêu đề thông báo</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <label>Người chịu trách nhiệm</label>
+                        <label>Người nhận</label>
                         <select class="form-control select2" style="width: 100%;">
                             <option selected="selected">Lã Mạnh Cường</option>
                             <option>Nguyễn Chí Thanh</option>
@@ -248,18 +248,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                            <label>Date:</label>
-            
-                            <div class="input-group date">
-                              <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                              </div>
-                              <input type="text" class="form-control pull-right" id="datepicker">
-                            </div>
-                            <!-- /.input group -->
-                          </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Mô tả</label>
+                        <label for="exampleInputPassword1">Nội dung</label>
                         <textarea rows="4" cols="50" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
@@ -269,7 +258,7 @@
                 </div>
         
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Tạo</button>
+                    <button type="submit" class="btn btn-primary">Gửi</button>
                 </div>
                 </form>
             </div>
