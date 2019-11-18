@@ -32,11 +32,8 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <style>
-    .col-md-2{
-        padding: 10px;
-    }
-    .col-md-10{
-        padding: 10px;
+    a{
+        color: #fff;
     }
 </style>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -154,124 +151,85 @@
   </header>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
-      <!-- sidebar: style can be found in sidebar.less -->
-      <section class="sidebar">
-        <!-- Sidebar user panel -->
-        <div class="user-panel">
-          <div class="pull-left image">
-            <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-          </div>
-          <div class="pull-left info">
-            <p>Alexander Pierce</p>
-            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-          </div>
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
-        <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
-          <div class="input-group">
-            <input type="text" name="q" class="form-control" placeholder="Search...">
-            <span class="input-group-btn">
-                  <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                  </button>
-                </span>
-          </div>
-        </form>
-        <!-- /.search form -->
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu" data-widget="tree">
-          <li class="header">MAIN NAVIGATION</li>
-          <li class="treeview">
+        <div class="pull-left info">
+          <p>Alexander Pierce</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Công việc công ty</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="ds_congviec_cty.html"><i class="fa fa-circle-o"></i>DS công việc CTY</a></li>
+            <li><a href="tao_du_an.html"><i class="fa fa-circle-o"></i> Tạo dự án</a></li>
+            <li><a href="chi_tiet_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết dự án</a></li>
+            <li><a href="tao_congviec_du_an.html"><i class="fa fa-circle-o"></i>Tạo công việc trong dự án</a></li>
+            <li><a href="chi_tiet_cong_viec_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết công việc dự án</a></li>
+            <li><a href="tao_cong_viec_nhan_vien_du_an.html"><i class="fa fa-circle-o"></i>Tạo công việc cho nhân viên</a></li>
+            <li><a href="chi_tiet_cong_viec_nhan_vien_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết công việc cho nhân viên</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
             <a href="#">
-              <i class="fa fa-dashboard"></i> <span>Current Task</span>
+              <i class="fa fa-dashboard"></i> <span>Công việc phòng ban</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="taocongviec.html"><i class="fa fa-circle-o"></i>List Task</a></li>
-              <li><a href="ketqua_congviec.html"><i class="fa fa-circle-o"></i> Create Task</a></li>
-              <li><a href="thongke_congviec.html"><i class="fa fa-circle-o"></i>Detail Projects</a></li>
+                <li><a href="ds_cong_viec_phong_ban.html"><i class="fa fa-circle-o"></i>Ds công việc phòng ban</a></li>
+                <li><a href="tao_cong_viec_phong_ban.html"><i class="fa fa-circle-o"></i>Tạo công việc </a></li>
+                <li><a href="chi_tiet_cong_viec_phong_ban.html"><i class="fa fa-circle-o"></i>Chi tiết công việc</a></li>
             </ul>
           </li>
           <li class="treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>KPI Managements</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                  <li><a href="dsKPI_nhanvien.html"><i class="fa fa-circle-o"></i>List Projects</a></li>
-                  <li><a href="dsKPI_phongban.html"><i class="fa fa-circle-o"></i> Create Project</a></li>
-                  <li><a href="chitiet_KPIduanNV.html"><i class="fa fa-circle-o"></i>List Projects</a></li>
-                  <li><a href="chitiet_KPIduan.html"><i class="fa fa-circle-o"></i> Create Project</a></li>
-                  <li><a href="chitiet_KPInhanvien.html"><i class="fa fa-circle-o"></i>Detail Projects</a></li>
-                  <li><a href="chitiet_KPIphongban.html"><i class="fa fa-circle-o"></i> Detail Task Project</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Procedural Task</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="taocongviec_quytrinh.html"><i class="fa fa-circle-o"></i>List Projects</a></li>
-                <li><a href="ketqua_quytrinh.html"><i class="fa fa-circle-o"></i> Create Project</a></li>
-                <li><a href="congviec_quytrinh.html"><i class="fa fa-circle-o"></i>Detail Projects</a></li>
-                <li><a href="detail_task_project.html"><i class="fa fa-circle-o"></i> Detail Task Project</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Projects Task</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="list_project.html"><i class="fa fa-circle-o"></i>List Projects</a></li>
-                <li><a href="create_project.html"><i class="fa fa-circle-o"></i> Create Project</a></li>
-                <li><a href="detail_project.html"><i class="fa fa-circle-o"></i>Detail Projects</a></li>
-                <li><a href="detail_task_project.html"><i class="fa fa-circle-o"></i> Detail Task Project</a></li>
-              </ul>
-            </li>
-          <li class="treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Notifications</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="create_notification.html"><i class="fa fa-circle-o"></i>List Notifications</a></li>
-                <li><a href="list_notification.html"><i class="fa fa-circle-o"></i> Create Notifications</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Reports</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="taobaocao.html"><i class="fa fa-circle-o"></i>Create Report</a></li>
-                <li><a href="ds_baocao.html"><i class="fa fa-circle-o"></i> List Report</a></li>
-                <li><a href="pheduyet_baocao.html"><i class="fa fa-circle-o"></i> List Report</a></li>
-              </ul>
-            </li>
-        </ul>
-      </section>
-   </aside>
+            <a href="#">
+              <i class="fa fa-dashboard"></i> <span>Công việc cá nhân</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="ds_cong_viec_ca_nhan.html"><i class="fa fa-circle-o"></i>Ds công việc </a></li>
+              <li><a href="tao_cong_viec_ca_nhan.html"><i class="fa fa-circle-o"></i>Tạo công việc </a></li>
+              <li><a href="chi_tiet_cong_viec_ca_nhan.html"><i class="fa fa-circle-o"></i>Chi tiết công việc</a></li>
+            </ul>
+          </li>
+      </ul>
+    </section>
+ </aside>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Chi tiết công việc của dự án ABC
+        Chi tiết dự án
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -287,7 +245,7 @@
           <!-- /.box -->
           <div class="box box-default">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Chi tiết công việc ABC của dự án XYZ</h3>
+                    <h3 class="box-title">Thông tin chung về dự án ABC</h3>
         
                     <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -295,30 +253,93 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <div class="row box-body">
-                        <div class="col-md-2 mt-4 ml-1  ">Tên dự án:</div><div class="col-md-10">Dự án nghiên cứu sản phẩm thực phẩm chức năng ABC</div>
-                        <div class="col-md-2 mt-4 ml-1  ">Tên công việc:</div><div class="col-md-10">Tìm kiếm nguồn nguyên liệu</div>
-                        <div class="col-md-2 mt-4 ml-1 ">Deadline:</div><div class="col-md-10">12/12/2019</div>
-                        <div class="col-md-2 mt-4 ml-1 ">Người chịu trách nhiệm:</div><div class="col-md-10">Lã Mạnh Cường</div>
-                        <div class="col-md-2 mt-4 ml-1 ">Mô tả:</div><div class="col-md-10">Mô tả chi tiết về dự án</div>
-                        <div class="col-md-2 mt-4 ml-1 ">Tài liệu:</div><div class="col-md-10">file</div>
-                        <div class="col-md-2 mt-4 ml-1 ">Trạng thái công việc:</div><div class="col-md-10">Hoàn thành</div>
-                        <div class="col-md-2 mt-4 ml-1 ">Thời gian hoàn thành:</div><div class="col-md-10">12/12/2019</div>
+                    <div class="row">
+                        <div class="col-md-2 ">Tên dự án:</div><div class="col-md-10">Dự án nghiên cứu sản phẩm thực phẩm chức năng ABC</div>
+                        <div class="col-md-2 ">Deadline:</div><div class="col-md-10">12/12/2019</div>
+                        <div class="col-md-2 ">Người chịu trách nhiệm:</div><div class="col-md-10">Lã Mạnh Cường</div>
+                        <div class="col-md-2 ">Mô tả:</div><div class="col-md-10">Mô tả chi tiết về dự án</div>
+                        <div class="col-md-2 ">Tài liệu:</div><div class="col-md-10">file</div>
+                        <div class="col-md-2 "><button class="btn btn-success">Chi tiết</button></div>
                     </div>
-                    <form role="form">
-                            <div class="box-body">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Nhận xét</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                </div>
-                            </div>
-                    
-                            <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Gửi</button>
-                            </div>
-                            </form>
                 </div>
             </div>
+
+
+            <div class="col-md-2"></div>
+          <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+                <button class="btn btn-success"><a href="create_task_project.html">Tạo công việc</a></button>
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Tên công việc</th>
+                  <th>Tên dự án</th>
+                  <th>Nhân viên thực hiện</th>
+                  <th>Deadline</th>
+                  <th>Trạng thái</th>
+                  <th>Hành động</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Tìm nguyên liệu</td>
+                        <td>Nghiên cứu thực phẩm chức năng ABC</td>
+                        <td>Lã Mạnh Cường</td>
+                        <td>12/12/2019</td>
+                        <td>Đang thực hiện</td>
+                        <td>
+                            <button class="btn btn-warning"><a href="detail_task_project.html">Chi tiết</a></button>
+                            <button class="btn btn-info">Sửa</button>
+                            <button class="btn btn-danger">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Tìm nguyên liệu</td>
+                        <td>Nghiên cứu thực phẩm chức năng ABC</td>
+                        <td>Lã Mạnh Cường</td>
+                        <td>12/12/2019</td>
+                        <td>Đang thực hiện</td>
+                        <td>
+                            <button class="btn btn-warning"><a href="detail_task_project.html">Chi tiết</a></button>
+                            <button class="btn btn-info">Sửa</button>
+                            <button class="btn btn-danger">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>1</td>
+                            <td>Tìm nguyên liệu</td>
+                            <td>Nghiên cứu thực phẩm chức năng ABC</td>
+                            <td>Lã Mạnh Cường</td>
+                            <td>12/12/2019</td>
+                            <td>Đang thực hiện</td>
+                            <td>
+                                <button class="btn btn-warning"><a href="detail_task_project.html">Chi tiết</a></button>
+                                <button class="btn btn-info">Sửa</button>
+                                <button class="btn btn-danger">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Tìm nguyên liệu</td>
+                            <td>Nghiên cứu thực phẩm chức năng ABC</td>
+                            <td>Lã Mạnh Cường</td>
+                            <td>12/12/2019</td>
+                            <td>Đang thực hiện</td>
+                            <td>
+                                <button class="btn btn-warning"><a href="detail_task_project.html">Chi tiết</a></button>
+                                <button class="btn btn-info">Sửa</button>
+                                <button class="btn btn-danger">Xóa</button>
+                            </td>
+                        </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
           <!-- /.box -->
         </div>
         <!-- /.col -->
