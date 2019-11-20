@@ -41,6 +41,17 @@
 <link rel="stylesheet"
 href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
+<style>
+  .loading{
+    width: 100px;
+    position: absolute;
+    z-index: 999;
+    left: 45%;
+    top: 69%;
+    display: none;
+  }
+
+</style>
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
 
@@ -184,20 +195,20 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
         <li class="header">MAIN NAVIGATION</li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Current Task</span>
+            <i class="fa fa-dashboard"></i> <span>Công việc thường xuyên</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="thongke_congviec.html"><i class="fa fa-circle-o"></i>List Task</a></li>
-            <li><a href="taocongviec.html"><i class="fa fa-circle-o"></i> Create Task</a></li>
-            <li><a href="ketqua_congviec.html"><i class="fa fa-circle-o"></i>Detail Projects</a></li>
+            <li><a href="thongke_congviec.html"><i class="fa fa-circle-o"></i>Thống kê công việc</a></li>
+            <li><a href="taocongviec.html"><i class="fa fa-circle-o"></i>Tạo công việc</a></li>
+            <li><a href="ketqua_congviec.html"><i class="fa fa-circle-o"></i>Chi tiết công việc</a></li>
           </ul>
         </li>
         <li class="treeview">
             <a href="#">
-              <i class="fa fa-dashboard"></i> <span>KPI Managements</span>
+              <i class="fa fa-dashboard"></i> <span>Quản lý KPI</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -213,21 +224,23 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
           </li>
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-dashboard"></i> <span>Procedural Task</span>
+              <i class="fa fa-dashboard"></i> <span>Công việc theo quy trình</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="congviec_quytrinh.html"><i class="fa fa-circle-o"></i>Ds công việc theo quy trình</a></li>
-              <li><a href="taocongviec_quytrinh.html"><i class="fa fa-circle-o"></i>Tạo công việc</a></li>
-              <li><a href="ketqua_quytrinh.html"><i class="fa fa-circle-o"></i>Chi tiết quy trình</a></li>
-              <li><a href="detail_task_project.html"><i class="fa fa-circle-o"></i>Chi tiết công việc</a></li>
+                <li><a href="ds_quytrinh.html"><i class="fa fa-circle-o"></i>Ds quy trình</a></li>
+                <li><a href="tao_quytrinh.html"><i class="fa fa-circle-o"></i>Tạo quy trình</a></li>
+                <li><a href="congviec_quytrinh.html"><i class="fa fa-circle-o"></i>Ds công việc theo quy trình</a></li>
+                <li><a href="taocongviec_quytrinh.html"><i class="fa fa-circle-o"></i>Tạo công việc</a></li>
+                <li><a href="ketqua_quytrinh.html"><i class="fa fa-circle-o"></i>Chi tiết quy trình</a></li>
+                <li><a href="detail_task_project.html"><i class="fa fa-circle-o"></i>Chi tiết công việc</a></li>
             </ul>
           </li>
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-dashboard"></i> <span>Projects Task</span>
+              <i class="fa fa-dashboard"></i> <span>Công việc theo dự án</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -241,7 +254,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
           </li>
         <li class="treeview">
             <a href="#">
-              <i class="fa fa-dashboard"></i> <span>Notifications</span>
+              <i class="fa fa-dashboard"></i> <span>Quản lý thông báo</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -253,7 +266,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
           </li>
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-dashboard"></i> <span>Reports</span>
+              <i class="fa fa-dashboard"></i> <span>Quản lý báo cáo</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -267,7 +280,6 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
       </ul>
     </section>
  </aside>
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -359,7 +371,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
       </div>
       <div class="form-group">
         <!-- /.col -->
-        <button type="button" class="btn btn-block btn-success">Tạo công việc</button>
+        <button type="button" class="btn btn-block btn-success btn-create">Tạo công việc</button>
       </div>
       <!-- /.row -->
     </div>
@@ -418,9 +430,27 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
  <script src="../../dist/js/adminlte.min.js"></script>
  <!-- AdminLTE for demo purposes -->
  <script src="../../dist/js/demo.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
  <!-- Page script -->
  <script>
   $(function () {
+
+    $('.btn-create').on('click', function(e){
+      e.preventDefault();
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Tạo công việc thành công',
+        showConfirmButton: true,
+        timer: 1500
+      }).then((result) => {
+        if (result.value) {
+          window.location="thongke_congviec.html";
+        }
+      })
+
+      
+    })
     //Initialize Select2 Elements
     $('.select2').select2()
 

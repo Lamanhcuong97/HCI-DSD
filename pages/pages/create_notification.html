@@ -179,20 +179,20 @@
           <li class="header">MAIN NAVIGATION</li>
           <li class="treeview">
             <a href="#">
-              <i class="fa fa-dashboard"></i> <span>Current Task</span>
+              <i class="fa fa-dashboard"></i> <span>Công việc thường xuyên</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="thongke_congviec.html"><i class="fa fa-circle-o"></i>List Task</a></li>
-              <li><a href="taocongviec.html"><i class="fa fa-circle-o"></i> Create Task</a></li>
-              <li><a href="ketqua_congviec.html"><i class="fa fa-circle-o"></i>Detail Projects</a></li>
+              <li><a href="thongke_congviec.html"><i class="fa fa-circle-o"></i>Thống kê công việc</a></li>
+              <li><a href="taocongviec.html"><i class="fa fa-circle-o"></i>Tạo công việc</a></li>
+              <li><a href="ketqua_congviec.html"><i class="fa fa-circle-o"></i>Chi tiết công việc</a></li>
             </ul>
           </li>
           <li class="treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>KPI Managements</span>
+                <i class="fa fa-dashboard"></i> <span>Quản lý KPI</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -208,21 +208,23 @@
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Procedural Task</span>
+                <i class="fa fa-dashboard"></i> <span>Công việc theo quy trình</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="congviec_quytrinh.html"><i class="fa fa-circle-o"></i>Ds công việc theo quy trình</a></li>
-                <li><a href="taocongviec_quytrinh.html"><i class="fa fa-circle-o"></i>Tạo công việc</a></li>
-                <li><a href="ketqua_quytrinh.html"><i class="fa fa-circle-o"></i>Chi tiết quy trình</a></li>
-                <li><a href="detail_task_project.html"><i class="fa fa-circle-o"></i>Chi tiết công việc</a></li>
+                  <li><a href="ds_quytrinh.html"><i class="fa fa-circle-o"></i>Ds quy trình</a></li>
+                  <li><a href="tao_quytrinh.html"><i class="fa fa-circle-o"></i>Tạo quy trình</a></li>
+                  <li><a href="congviec_quytrinh.html"><i class="fa fa-circle-o"></i>Ds công việc theo quy trình</a></li>
+                  <li><a href="taocongviec_quytrinh.html"><i class="fa fa-circle-o"></i>Tạo công việc</a></li>
+                  <li><a href="ketqua_quytrinh.html"><i class="fa fa-circle-o"></i>Chi tiết quy trình</a></li>
+                  <li><a href="detail_task_project.html"><i class="fa fa-circle-o"></i>Chi tiết công việc</a></li>
               </ul>
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Projects Task</span>
+                <i class="fa fa-dashboard"></i> <span>Công việc theo dự án</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -236,7 +238,7 @@
             </li>
           <li class="treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Notifications</span>
+                <i class="fa fa-dashboard"></i> <span>Quản lý thông báo</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -248,7 +250,7 @@
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Reports</span>
+                <i class="fa fa-dashboard"></i> <span>Quản lý báo cáo</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
@@ -313,7 +315,7 @@
                 </div>
         
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Gửi</button>
+                    <button type="submit" class="btn btn-primary btn-create">Gửi</button>
                 </div>
                 </form>
             </div>
@@ -363,9 +365,25 @@
 <script src="../../dist/js/demo.js"></script>
 <!-- bootstrap datepicker -->
 <script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- page script -->
-<script>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+ <!-- Page script -->
+ <script>
+  $(function () {
+    $('.btn-create').on('click', function(e){
+      e.preventDefault();
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Tạo thông báo thành công',
+        showConfirmButton: true,
+        timer: 1500
+      }).then((result) => {
+        if (result.value) {
+          window.location="list_notification.html";
+        }
+      })
+    })
+  });
     
     //Date picker
     $('#datepicker').datepicker({
