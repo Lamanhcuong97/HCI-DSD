@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Flot Charts</title>
+  <title>Phần mền quản lý công việc - Fabbi JSC</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -143,7 +143,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
         </nav>
 </header>
 <!-- Left side column. contains the logo and sidebar -->
-<aside class="main-sidebar">
+ <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
@@ -178,6 +178,8 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
             </span>
           </a>
           <ul class="treeview-menu">
+              
+            <li><a href="ds_congviec_thuong_xuyen.html"><i class="fa fa-circle-o"></i>Ds công việc thường xuyên</a></li>
             <li><a href="thongke_congviec.html"><i class="fa fa-circle-o"></i>Thống kê công việc</a></li>
             <li><a href="taocongviec.html"><i class="fa fa-circle-o"></i>Tạo công việc</a></li>
             <li><a href="ketqua_congviec.html"><i class="fa fa-circle-o"></i>Chi tiết công việc</a></li>
@@ -310,7 +312,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
             <textarea class="form-control" rows="5" placeholder="Nhận xét ..."></textarea>
           </div>
           <!-- /.box -->
-          <button type="button" class="btn btn-block btn-success">Nhận xét</button>
+          <button type="button" class="btn btn-block btn-success btn-comment">Nhận xét</button>
         </div>
         <!-- /.col -->
       </div>
@@ -367,7 +369,31 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
  <!-- AdminLTE for demo purposes -->
  <script src="../../dist/js/demo.js"></script>
  <!-- page script -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+ <!-- Page script -->
  <script>
+  $(function () {
+    $('.btn-comment').on('click', function(e){
+      e.preventDefault();
+      Swal.fire({
+        title: 'Bạn có muốn gửi nhận xét',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Send'
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire(
+            'Sended!',
+            'Gửi nhận xét thành côngs!.',
+            'success'
+          )
+          window.location="congviec_quytrinh.html";
+        }
+      })
+    })
+  });
   $(function () {
     $('#example1').DataTable()
     $('#example2').DataTable({

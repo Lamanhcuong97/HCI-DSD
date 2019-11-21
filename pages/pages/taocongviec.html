@@ -166,7 +166,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
         </nav>
 </header>
 <!-- Left side column. contains the logo and sidebar -->
-<aside class="main-sidebar">
+ <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
@@ -201,6 +201,8 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
             </span>
           </a>
           <ul class="treeview-menu">
+              
+            <li><a href="ds_congviec_thuong_xuyen.html"><i class="fa fa-circle-o"></i>Ds công việc thường xuyên</a></li>
             <li><a href="thongke_congviec.html"><i class="fa fa-circle-o"></i>Thống kê công việc</a></li>
             <li><a href="taocongviec.html"><i class="fa fa-circle-o"></i>Tạo công việc</a></li>
             <li><a href="ketqua_congviec.html"><i class="fa fa-circle-o"></i>Chi tiết công việc</a></li>
@@ -301,8 +303,6 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
     <!-- SELECT2 EXAMPLE -->
     <div class="box box-default">
       <div class="box-header with-border">
-        <h3 class="box-title">Tạo công việc phòng ban</h3>
-
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
           <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
@@ -315,23 +315,23 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
 
         <div class="form-group">
           <label>Tên công việc</label>
-          <input type="text" class="form-control" placeholder="Enter ...">
+          <input type="text" class="form-control" id="name_task" placeholder="Tên công việc...">
         </div>
         <div class="form-group">
           <label>Phòng ban phụ trách</label>
-          <select class="form-control select2" style="width: 100%;">
-            <option selected="selected">Phòng hành chính, nhân sự</option>
-            <option>Phòng maketing</option>
-            <option>Phòng kĩ thuật</option>
-            <option>Phòng nhân sự</option>
-            <option>Phòng tài chính</option>
+          <select class="form-control select2" id="department" style="width: 100%;">
+            <option selected="selected" value="Phòng hành chính, nhân sự">Phòng hành chính, nhân sự</option>
+            <option value="Phòng maketing">Phòng maketing</option>
+            <option value="Phòng kĩ thuật">Phòng kĩ thuật</option>
+            <option value="Phòng nhân sự">Phòng nhân sự</option>
+            <option value="Phòng tài chính">Phòng tài chính</option>
 
           </select>
         </div>
 
         <div class="form-group">
           <label>Nhận xét:</label>
-          <textarea class="form-control" rows="5" placeholder="Nhận xét ..."></textarea>
+          <textarea class="form-control" id="remask" rows="5" placeholder="Nhận xét ..."></textarea>
         </div>
         <!-- /.form-group -->
         <div class="form-group">
@@ -341,7 +341,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
             <div class="input-group-addon">
               <i class="fa fa-calendar"></i>
             </div>
-            <input type="text" class="form-control pull-right" id="datepicker1">
+            <input type="text" class="form-control pull-right" id="start_date">
           </div>
           <!-- /.input group -->
         </div>
@@ -352,14 +352,14 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
             <div class="input-group-addon">
               <i class="fa fa-calendar"></i>
             </div>
-            <input type="text" class="form-control pull-right" id="datepicker">
+            <input type="text" class="form-control pull-right" id="deadline">
           </div>
           <!-- /.input group -->
         </div>
         <!-- /.col -->
         <div class="form-group">
           <label>Các phòng ban liên quan</label>
-          <select class="form-control select2" multiple="multiple" data-placeholder="Chọn các phòng ban"
+          <select class="form-control select2" id="departments_related" data-placeholder="Chọn các phòng ban"
           style="width: 100%;">
           <option>Phòng maketing</option>
           <option>Phòng kĩ thuật</option>
@@ -437,7 +437,40 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
 
     $('.btn-create').on('click', function(e){
       e.preventDefault();
-      Swal.fire({
+      $name_task = $('#name_task').val();
+      $department =  $('#department').val();
+      $remask =  $('#remask').val();
+      $start_date = $('#start_date').val();
+      $deadline =  $('#deadline').val();
+      $departments_related =  $('#departments_related').val();
+
+      $.ajax({
+            url : "https://jsonplaceholder.typicode.com/todos/1", // link API
+            type : "post", // Phương thức POST
+            data : {  
+              name_task : $name_task,
+              department : $department,
+              remask : $remask,
+              start_date : $start_date,
+              deadline : $deadline,
+              departments_related : $departments_related// Dữ liệu gửi lên nếu dùng phương thức Post để tạo, sửa
+            },
+            success : function (result){ // result là kết quả trả về khi gọi đến API
+              Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Tạo công việc thành công',
+                showConfirmButton: true,
+                timer: 1500
+              }).then((result) => {
+                if (result.value) {
+                  window.location="ds_congviec_thuong_xuyen.html";
+                }
+              })
+            }
+        });
+
+        Swal.fire({
         position: 'center',
         icon: 'success',
         title: 'Tạo công việc thành công',
@@ -445,7 +478,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
         timer: 1500
       }).then((result) => {
         if (result.value) {
-          window.location="thongke_congviec.html";
+          window.location="ds_congviec_thuong_xuyen.html";
         }
       })
 
@@ -485,11 +518,11 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
     )
 
     //Date picker
-    $('#datepicker').datepicker({
+    $('#deadline').datepicker({
       autoclose: true
     })
 
-    $('#datepicker1').datepicker({
+    $('#start_date').datepicker({
       autoclose: true
     })
 
