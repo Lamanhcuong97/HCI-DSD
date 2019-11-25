@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Create Project</title>
+  <title>Cấu hình KPI</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -272,7 +272,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Tạo công việc của dự án ABC
+        Cấu hình KPI
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -286,72 +286,115 @@
       <div class="row">
         <div class="col-xs-12">
           <!-- /.box -->
-
-          <div class="box">
+            <div class="box">
             <!-- /.box-header -->
-            <div class="box-body">
-            <form role="form">
                 <div class="box-body">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Tên công việc</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Tên công việc">
-                    </div>
-                    <div class="form-group">
-                            <label for="exampleInputEmail1">Tên dự án</label>
-                            <input type="email" class="form-control" disabled id="exampleInputEmail1" value="Dự án ABC" >
-                        </div>
-                    <div class="form-group">
-                        <label>Người chịu trách nhiệm</label>
-                        <select class="form-control select2" style="width: 100%;">
-                            <option selected="selected">Lã Mạnh Cường</option>
-                            <option>Nguyễn Chí Thanh</option>
-                            <option>NGuyễn Duy Kỳ</option>
-                            <option>Trịnh Duy Hưng</option>   
-                            <option>Kerlor Senglao</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                            <label>Date:</label>
-                            <div class="input-group date">
-                              <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                              </div>
-                              <input type="text" class="form-control pull-right" id="datepicker" value="11/27/2019">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#create_KPI">Tạo mới KPI</button>
+                    <h3 class="box-title">Quản lý KPI </h3>
+                    <div class="box box-default">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">KPI công ty 1 </h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                             </div>
-                            <!-- /.input group -->
-                          </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Mô tả</label>
-                        <textarea rows="4" cols="50" class="form-control"></textarea>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="box box-default">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">KPI phòng ban 1 </h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <ul>
+                                        <li>KPI 1</li>
+                                        <li>KPI 2</li>
+                                        <li>KPI 3</li>
+                                        <li>KPI 4</li>
+                                        <li>KPI 5</li>
+                                    </ul> 
+                            
+                                </div>
+                                <!-- /.box-body -->
+                            
+                            </div>
+                            
+                        </div>
+                        <!-- /.box-body -->
+                    
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputFile" style="width: 100%;">Người phối hợp thực hiện</label>
-                        <select class="form-control select2" style="width: 95%; float: left;">
-                                <option selected="selected">Lã Mạnh Cường</option>
-                                <option>Nguyễn Chí Thanh</option>
-                                <option>NGuyễn Duy Kỳ</option>
-                                <option>Trịnh Duy Hưng</option>   
-                                <option>Kerlor Senglao</option>
-                        </select>
-                        <button class="btn"><i class="fa fa-plus"></i></button>
-                    </div>
+                <!-- /.box-body -->
                 </div>
-        
-                <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Tạo</button>
-                </div>
-                </form>
-            </div>
-            <!-- /.box-body -->
-          </div>
           <!-- /.box -->
-        </div>
+            </div>
         <!-- /.col -->
-      </div>
+        </div>
       <!-- /.row -->
     </section>
     <!-- /.content -->
   </div>
+
+  <div id="create_KPI" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Tạo KPI</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Tên KPI</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên KPI">
+                            </div>
+                            <div class="form-group">
+                                <label>KPI công ty</label>
+                                <select class="form-control select2" style="width: 100%;">
+                                    <option selected="selected">Đạt doanh thu</option>
+                                    <option>KPI công ty 1</option>
+                                    <option>KPI công ty 2</option>
+                                    <option>KPI công ty 3</option>   
+                                    <option>KPI công ty 4</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>KPI phòng ban</label>
+                                <select class="form-control select2" style="width: 100%;">
+                                    <option selected="selected">Hoàn thành công việc đúng hạn</option>
+                                    <option>KPI phòng ban 1</option>
+                                    <option>KPI phòng ban 2</option>
+                                    <option>KPI phòng ban 3</option>   
+                                    <option>KPI phòng ban 4</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Chi tiêu</label>
+                                <input type="text" class="form-control" id="exampleInputtext1" placeholder="Nhập chỉ tiêu cần đạt của KPI">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleInputtext1">Trọng số</label>
+                                    <input type="text" class="form-control" id="exampleInputtext1" placeholder="Nhập trọng số của KPI">
+                                </div>
+                        </div>
+                
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-primary btn-create">Tạo</button>
+                        </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+      
+        </div>
+      </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
@@ -389,8 +432,27 @@
 <!-- bootstrap datepicker -->
 <script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- page script -->
-<script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+ <!-- Page script -->
+ <script>
+  $(function () {
+    $('.btn-create').on('click', function(e){
+      e.preventDefault();
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Tạo dự án thành công',
+        showConfirmButton: true,
+        timer: 1500
+      }).then((result) => {
+        if (result.value) {
+          window.location="list_project.html";
+        }
+      })
 
+      
+    })
+  });
     
     //Date picker
     $('#datepicker').datepicker({
