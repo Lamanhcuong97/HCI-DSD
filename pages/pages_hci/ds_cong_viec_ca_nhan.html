@@ -189,7 +189,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
                     <li><a href="ds_congviec_cty.html"><i class="fa fa-circle-o"></i>DS công việc CTY</a></li>
                     <li><a href="tao_du_an.html"><i class="fa fa-circle-o"></i> Tạo dự án</a></li>
                     <li><a href="chi_tiet_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết dự án</a></li>
-                    <li><a href="tao_congviec_du_an.html"><i class="fa fa-circle-o"></i>Tạo công việc trong dự án</a></li>
+                    <li><a href="tao_congviec_cty.html"><i class="fa fa-circle-o"></i>Tạo công việc trong dự án</a></li>
                     <li><a href="chi_tiet_cong_viec_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết công việc dự án</a></li>
                     <li><a href="tao_cong_viec_nhan_vien_du_an.html"><i class="fa fa-circle-o"></i>Tạo công việc cho nhân viên</a></li>
                     <li><a href="chi_tiet_cong_viec_nhan_vien_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết công việc cho nhân viên</a></li>
@@ -372,6 +372,32 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
           </div>
           <!-- /.box-header -->
           <div class="box-body">
+            
+            <form action="" method="POST" class="form-inline" role="form">
+            
+              <div class="form-group">
+                <label class="" for="">Quy trình</label>
+                <select name="" id="input" class="form-control" required="required">
+                  <option value="">Sản xuất thuốc ABC</option>
+                  <option value="">Tiếp nhận nhân viên mới</option>
+                </select>
+              </div>
+              <div class="form-group">
+                  <label class="" for="">Phòng ban</label>
+                  <select name="" id="input" class="form-control" required="required">
+                    <option value="">Hành chính - Nhân sự</option>
+                    <option value="">Bán hàng</option>
+                    <option value="">Kế toán</option>
+                    <option value="">Sản xuất</option>
+                  </select>
+                </div>
+            
+              
+            
+              <button type="submit" class="btn btn-primary">Lọc</button>
+            </form>
+            <br>
+           
             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
@@ -382,7 +408,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
                   <th>Phòng ban thực hiện</th>
                   <th>Deadline</th>
                   <th>Tiến độ</th>
-                  <th>Kết quả</th>
+                  <th>Chi tiết</th>
                   <th style="width: 40px">Sửa</th>
                   <th style="width: 40px">Xóa</th>
                 </tr>
@@ -395,12 +421,12 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
                   <td>Quy trình</td>
                   <td>NGuyễn A</td>
                   <td>Phòng hành chính</td>
-                  <td>20/11/2019</td>
+                  <td>20/10/2019 - còn lại 24h </td>
                   <td>35%</td>
-                  <td><a href="chitiet_congvieccanhan.html">Kết quả</a></td>
+                  <td><a href="chi_tiet_cong_viec_ca_nhan.html" class="btn btn-primary">Chi tiết</a></td>
 
-                  <td><a href="editarea.php?id="><button class=" btn btn-primary btn-warning" >Edit<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
-                    <td><a href="deletearea.php?id=" class="btn btn-social-icon btn-google" onClick="return checkDelete()" ><i class="fa fa fa-trash-o"></i></a>
+                  <td><a href="sua_cong_viec.html"><button class=" btn btn-primary btn-warning" >Cập nhật<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
+                    <td><button class="btn btn-danger btn-delete">Xóa</button>
                     </tr>
                     <tr>
                      <td>2</td>
@@ -408,12 +434,12 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
                      <td>Maketting</td>
                      <td>Nguyễn Chí Thanh</td>
                      <td>Phòng hành chính nhân sự</td>
-                     <td>20/10/2019</td>
+                     <td>20/10/2019 - còn lại 24h </td>
                      <td>65%</td>
-                     <td><a href="chitiet_congvieccanhan.html">Kết quả</a></td>
+                     <td><a href="chi_tiet_cong_viec_ca_nhan.html" class="btn btn-primary">Chi tiết</a></td>
 
-                     <td><a href="editarea.php?id="><button class=" btn btn-primary btn-warning" >Edit<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
-                      <td><a href="deletearea.php?id=" class="btn btn-social-icon btn-google" onClick="return checkDelete()" ><i class="fa fa fa-trash-o"></i></a>
+                     <td><a href="sua_cong_viec.html"><button class=" btn btn-primary btn-warning" >Cập nhật<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
+                      <td><button class="btn btn-danger btn-delete">Xóa</button>
                       </tr>
                       <tr>
                         <td>3</td>
@@ -421,12 +447,12 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
                         <td>Maketting</td>
                         <td>Nguyễn Chí Thanh</td>
                         <td>Phòng hành chính nhân sự</td>
-                        <td>20/10/2019</td>
+                        <td>20/10/2019 - còn lại 24h </td>
                         <td>65%</td>
-                        <td><a href="chitiet_congvieccanhan.html">Kết quả</a></td>
+                        <td><a href="chi_tiet_cong_viec_ca_nhan.html" class="btn btn-primary">Chi tiết</a></td>
 
-                        <td><a href="editarea.php?id="><button class=" btn btn-primary btn-warning" >Edit<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
-                          <td><a href="deletearea.php?id=" class="btn btn-social-icon btn-google" onClick="return checkDelete()" ><i class="fa fa fa-trash-o"></i></a>
+                        <td><a href="sua_cong_viec.html"><button class=" btn btn-primary btn-warning" >Cập nhật<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
+                          <td><button class="btn btn-danger btn-delete">Xóa</button>
                           </tr>
                           <tr>
                            <td>4  </td>
@@ -434,12 +460,12 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
                            <td>Maketting</td>
                            <td>Nguyễn Chí Thanh</td>
                            <td>Phòng hành chính nhân sự</td>
-                           <td>20/10/2019</td>
+                           <td>20/10/2019 - còn lại 24h </td>
                            <td>65%</td>
-                           <td><a href="chitiet_congvieccanhan.html">Kết quả</a></td>
+                           <td><a href="chi_tiet_cong_viec_ca_nhan.html" class="btn btn-primary">Chi tiết</a></td>
 
-                           <td><a href="editarea.php?id="><button class=" btn btn-primary btn-warning" >Edit<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
-                            <td><a href="deletearea.php?id=" class="btn btn-social-icon btn-google" onClick="return checkDelete()" ><i class="fa fa fa-trash-o"></i></a>
+                           <td><a href="sua_cong_viec.html"><button class=" btn btn-primary btn-warning" >Cập nhật<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
+                            <td><button class="btn btn-danger btn-delete">Xóa</button>
                             </tr>
 
                           </tbody>
@@ -452,7 +478,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
                              <th>Phòng ban thực hiện</th>
                              <th>Deadline</th>
                              <th>Tiến độ</th>
-                             <th>Kết quả</th>
+                             <th>Chi tiết</th>
                              <th style="width: 40px">Sửa</th>
                              <th style="width: 40px">Xóa</th>
                            </tr>
@@ -510,11 +536,35 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
  <!-- AdminLTE App -->
  <script src="../../dist/js/adminlte.min.js"></script>
  <!-- AdminLTE for demo purposes -->
- <script src="../../dist/js/demo.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>9
+ <script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../../dist/js/demo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="../../bower_components/Flot/jquery.flot.js"></script>
+  <script src="../../bower_components/Flot/jquery.flot.js"></script>
+  <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+  <script src="../../bower_components/Flot/jquery.flot.resize.js"></script>
+  <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+  <script src="../../bower_components/Flot/jquery.flot.pie.js"></script>
+  <!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+  <script src="../../bower_components/Flot/jquery.flot.categories.js"></script>
  <!-- page script -->
  <script>
   $(function () {
+    $('.btn-delete').on('click', function(e){
+      Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Bạn có muốn xóa công việc??',
+            showConfirmButton: true,
+            timer: 1500
+          }).then((result) => {
+            if (result.value) {
+              // window.location="ds_congviec_thuong_xuyen.html";
+            }
+          })
+    });
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,

@@ -242,7 +242,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Chi tiết công việc của dự án ABC
+        Chi tiết công việc
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -258,7 +258,7 @@
           <!-- /.box -->
           <div class="box box-default">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Chi tiết công việc ABC của dự án XYZ</h3>
+                    <h3 class="box-title">Chi tiết công việc ABC </h3>
         
                     <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -267,7 +267,6 @@
                 <!-- /.box-header -->
                 <div class="box-body">
                     <div class="row box-body">
-                        <div class="col-md-2 mt-4 ml-1  ">Tên dự án:</div><div class="col-md-10">Dự án nghiên cứu sản phẩm thực phẩm chức năng ABC</div>
                         <div class="col-md-2 mt-4 ml-1  ">Tên công việc:</div><div class="col-md-10">Tìm kiếm nguồn nguyên liệu</div>
                         <div class="col-md-2 mt-4 ml-1 ">Deadline:</div><div class="col-md-10">12/12/2019</div>
                         <div class="col-md-2 mt-4 ml-1 ">Người chịu trách nhiệm:</div><div class="col-md-10">Lã Mạnh Cường</div>
@@ -285,7 +284,7 @@
                             </div>
                     
                             <div class="box-footer">
-                                 <button type="submit" class="btn btn-primary btn-send-comment">Gửi</button>
+                                <button type="submit" class="btn btn-primary ">Gửi</button>
                             </div>
                             </form>
                 </div>
@@ -329,27 +328,9 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <!-- page script -->
 <script>
   $(function () {
-
-    $('.btn-send-comment').on('click', function(e){
-    e.preventDefault();
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Gửi nhận xét thành công!',
-      showConfirmButton: true,
-      timer: 1500
-    }).then((result) => {
-      if (result.value) {
-        window.location="chi_tiet_cong_viec_du_an.html";
-      }
-    })
-
-    
-  })
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,

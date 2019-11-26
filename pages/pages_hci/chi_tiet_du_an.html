@@ -188,7 +188,7 @@
             <li><a href="ds_congviec_cty.html"><i class="fa fa-circle-o"></i>DS công việc CTY</a></li>
             <li><a href="tao_du_an.html"><i class="fa fa-circle-o"></i> Tạo dự án</a></li>
             <li><a href="chi_tiet_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết dự án</a></li>
-            <li><a href="tao_congviec_du_an.html"><i class="fa fa-circle-o"></i>Tạo công việc trong dự án</a></li>
+            <li><a href="tao_congviec_cty.html"><i class="fa fa-circle-o"></i>Tạo công việc trong dự án</a></li>
             <li><a href="chi_tiet_cong_viec_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết công việc dự án</a></li>
             <li><a href="tao_cong_viec_nhan_vien_du_an.html"><i class="fa fa-circle-o"></i>Tạo công việc cho nhân viên</a></li>
             <li><a href="chi_tiet_cong_viec_nhan_vien_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết công việc cho nhân viên</a></li>
@@ -269,8 +269,33 @@
           <div class="box">
             <!-- /.box-header -->
             <div class="box-body">
-                <button class="btn btn-success"><a href="create_task_project.html">Tạo công việc</a></button>
-              <table id="example1" class="table table-bordered table-striped">
+                <button class="btn btn-success"><a href="tao_cong_viec_nhan_vien_du_an.html">Tạo công việc</a></button>
+                
+                <br><br>
+                <form action="" method="POST" class="form-inline" role="form">
+                  <div class="form-group">
+                    <label class="" for="">Quy trình</label>
+                    <select name="" id="input" class="form-control" required="required">
+                      <option value="">Sản xuất thuốc ABC</option>
+                      <option value="">Tiếp nhận nhân viên mới</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                      <label class="" for="">Phòng ban</label>
+                      <select name="" id="input" class="form-control" required="required">
+                        <option value="">Hành chính - Nhân sự</option>
+                        <option value="">Bán hàng</option>
+                        <option value="">Kế toán</option>
+                        <option value="">Sản xuất</option>
+                      </select>
+                    </div>
+                
+                  
+                
+                  <button type="submit" class="btn btn-primary">Lọc</button>
+                </form>
+                <br>
+            <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>STT</th>
@@ -292,8 +317,8 @@
                         <td>Đang thực hiện</td>
                         <td>
                             <button class="btn btn-warning"><a href="detail_task_project.html">Chi tiết</a></button>
-                            <button class="btn btn-info">Sửa</button>
-                            <button class="btn btn-danger">Xóa</button>
+                            <button class="btn btn-info btn-edit">Sửa</button>
+                            <button class="btn btn-danger btn-delete">Xóa</button>
                         </td>
                     </tr>
                     <tr>
@@ -305,8 +330,8 @@
                         <td>Đang thực hiện</td>
                         <td>
                             <button class="btn btn-warning"><a href="detail_task_project.html">Chi tiết</a></button>
-                            <button class="btn btn-info">Sửa</button>
-                            <button class="btn btn-danger">Xóa</button>
+                            <button class="btn btn-info btn-edit">Sửa</button>
+                            <button class="btn btn-danger btn-delete">Xóa</button>
                         </td>
                     </tr>
                     <tr>
@@ -318,8 +343,8 @@
                             <td>Đang thực hiện</td>
                             <td>
                                 <button class="btn btn-warning"><a href="detail_task_project.html">Chi tiết</a></button>
-                                <button class="btn btn-info">Sửa</button>
-                                <button class="btn btn-danger">Xóa</button>
+                                <button class="btn btn-info btn-edit">Sửa</button>
+                                <button class="btn btn-danger btn-delete">Xóa</button>
                             </td>
                         </tr>
                         <tr>
@@ -331,8 +356,8 @@
                             <td>Đang thực hiện</td>
                             <td>
                                 <button class="btn btn-warning"><a href="detail_task_project.html">Chi tiết</a></button>
-                                <button class="btn btn-info">Sửa</button>
-                                <button class="btn btn-danger">Xóa</button>
+                                <button class="btn btn-info btn-edit">Sửa</button>
+                                <button class="btn btn-danger btn-delete">Xóa</button>
                             </td>
                         </tr>
                 </tbody>
@@ -380,9 +405,38 @@
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <!-- page script -->
 <script>
   $(function () {
+
+    $('.btn-edit').on('click', function(e){
+      Swal.fire({
+            position: 'center',
+            icon: 'warning',
+            title: 'Bạn có muốn sửa công việc',
+            showConfirmButton: true,
+            timer: 1500
+          }).then((result) => {
+            if (result.value) {
+              // window.location="ds_congviec_thuong_xuyen.html";
+            }
+          })
+    });
+
+    $('.btn-delete').on('click', function(e){
+      Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Bạn có muốn xóa công việc??',
+            showConfirmButton: true,
+            timer: 1500
+          }).then((result) => {
+            if (result.value) {
+              // window.location="ds_congviec_thuong_xuyen.html";
+            }
+          })
+    });
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,

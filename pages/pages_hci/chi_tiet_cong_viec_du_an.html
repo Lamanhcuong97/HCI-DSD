@@ -347,7 +347,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
                     <li><a href="ds_congviec_cty.html"><i class="fa fa-circle-o"></i>DS công việc CTY</a></li>
                     <li><a href="tao_du_an.html"><i class="fa fa-circle-o"></i> Tạo dự án</a></li>
                     <li><a href="chi_tiet_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết dự án</a></li>
-                    <li><a href="tao_congviec_du_an.html"><i class="fa fa-circle-o"></i>Tạo công việc trong dự án</a></li>
+                    <li><a href="tao_congviec_cty.html"><i class="fa fa-circle-o"></i>Tạo công việc trong dự án</a></li>
                     <li><a href="chi_tiet_cong_viec_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết công việc dự án</a></li>
                     <li><a href="tao_cong_viec_nhan_vien_du_an.html"><i class="fa fa-circle-o"></i>Tạo công việc cho nhân viên</a></li>
                     <li><a href="chi_tiet_cong_viec_nhan_vien_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết công việc cho nhân viên</a></li>
@@ -417,8 +417,8 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
               <div class="col-md-4">Tên nhân viên</div><div class="col-md-8">Nguyễn Chí Thanh</div>
               <div class="col-md-4">Phòng:</div><div class="col-md-8">Tính lương nhân viênle</div>
               <div class="col-md-4">Tên công việc:</div><div class="col-md-8">Tính lương thôi</div>
-              <div class="col-md-4">Ngày bắt đầu:</div><div class="col-md-8">20/10/2019</div>
-              <div class="col-md-4">Deadline:</div><div class="col-md-8">20/11/2019</div>
+              <div class="col-md-4">Ngày bắt đầu:</div><div class="col-md-8">20/10/2019 - còn lại 24h</div>
+              <div class="col-md-4">Deadline:</div><div class="col-md-8">20/11/2019 - còn lại 24h</div>
               <div class="col-md-4">Các tiêu chí KPI:</div><div class="col-md-8">Tính lương thôi</div>
               <div class="col-md-4"></div><div class="col-md-8">Báo cáo cho ban kế toán trước 18/11</div>
              <div class="col-md-4">Người review:</div><div class="col-md-8">Lã Mạnh Cường</div>
@@ -433,7 +433,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
         <!-- /.col --><div class="col-xs-12">
 
         <!-- /.box -->
-        <a href="taocongviec_canhan.html"><button type="button" class="btn btn-block btn-success">Tạo công việc nhân viên</button></a>
+        <a href="tao_cong_viec_ca_nhan.html"><button type="button" class="btn btn-block btn-success">Tạo công việc nhân viên</button></a>
       </div>
       </div>
       <!-- /.row -->
@@ -447,7 +447,31 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <table id="example1" class="table table-bordered table-striped">
+              <form action="" method="POST" class="form-inline" role="form">
+            
+              <div class="form-group">
+                <label class="" for="">Quy trình</label>
+                <select name="" id="input" class="form-control" required="required">
+                  <option value="">Sản xuất thuốc ABC</option>
+                  <option value="">Tiếp nhận nhân viên mới</option>
+                </select>
+              </div>
+              <div class="form-group">
+                  <label class="" for="">Phòng ban</label>
+                  <select name="" id="input" class="form-control" required="required">
+                    <option value="">Hành chính - Nhân sự</option>
+                    <option value="">Bán hàng</option>
+                    <option value="">Kế toán</option>
+                    <option value="">Sản xuất</option>
+                  </select>
+                </div>
+            
+              
+            
+              <button type="submit" class="btn btn-primary">Lọc</button>
+            </form>
+            <br>
+            <table id="example1" class="table table-bordered table-striped">
                 <thead>
                   <tr>
                     <th style="width: 40px">STT</th>
@@ -462,54 +486,54 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
                     <td>1</td>
                     <td>Công việc
                     </td>
-                    <td>20/11/2019</td>
-                    <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
-                      <td><a href="ketqua_congviec.html">Báo cáo</a></td>
+                    <td>20/11/2019 - còn lại 24h</td>
+                    <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%</button></a>
+                      <td><a href="chi_tiet_cong_viec_nhan_vien_du_an.html" class="btn btn-primary">Chi tiết</a></td>
 
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>Tính chuyên cần
                       </td>
-                      <td>20/11/2019</td>
-                      <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
-                        <td><a href="chitietcongviec_duan.html">Báo cáo</a></td>
+                      <td>20/11/2019 - còn lại 24h</td>
+                      <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%</button></a>
+                        <td><a href="chi_tiet_cong_viec_nhan_vien_du_an.html" class="btn btn-primary">Chi tiết</a></td>
 
                       </tr>
                       <tr>
                         <td>3</td>
                         <td>Báo cáo tiến độ
                         </td>
-                        <td>20/11/2019</td>
-                        <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
-                          <td><a href="chitietcongviec_duan.html">Báo cáo</a></td>
+                        <td>20/11/2019 - còn lại 24h</td>
+                        <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%</button></a>
+                          <td><a href="chi_tiet_cong_viec_nhan_vien_du_an.html" class="btn btn-primary">Chi tiết</a></td>
 
                         </tr>
                         <tr>
                           <td>4</td>
                           <td>Lấy thông tin lương
                           </td>
-                          <td>20/11/2019</td>
-                          <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
-                            <td><a href="chitietcongviec_duan.html">Báo cáo</a></td>
+                          <td>20/11/2019 - còn lại 24h</td>
+                          <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%</button></a>
+                            <td><a href="chi_tiet_cong_viec_nhan_vien_du_an.html" class="btn btn-primary">Chi tiết</a></td>
 
                           </tr>
                           <tr>
                             <td>5</td>
                             <td>Tính thưởng
                             </td>
-                            <td>20/11/2019</td>
-                            <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
-                              <td><a href="chitietcongviec_duan.html">Báo cáo</a></td>
+                            <td>20/11/2019 - còn lại 24h</td>
+                            <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%</button></a>
+                              <td><a href="chi_tiet_cong_viec_nhan_vien_du_an.html" class="btn btn-primary">Chi tiết</a></td>
 
                             </tr>
                             <tr>
                               <td>6</td>
                               <td>Tính lương
                               </td>
-                              <td>20/11/2019</td>
-                              <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%<i class="fa fa-pencil" aria-hidden="true"></i></button></a>
-                                <td><a href="chitietcongviec_duan.html">Báo cáo</a></td>
+                              <td>20/11/2019 - còn lại 24h</td>
+                              <td><a href="taocongviec_quytrinh.html"><button class=" btn btn-primary btn-warning" >35%</button></a>
+                                <td><a href="chi_tiet_cong_viec_nhan_vien_du_an.html" class="btn btn-primary">Chi tiết</a></td>
 
                               </tr>
 
@@ -530,7 +554,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
                         <textarea class="form-control" rows="5" placeholder="Nhận xét ..."></textarea>
                       </div>
                       <!-- /.box -->
-                      <button type="button" class="btn btn-block btn-success">Nhận xét</button>
+                      <button type="button" class="btn btn-block btn-success btn-send-comment">Nhận xét</button>
                     </div>
                     <!-- /.col -->
                   </div>
@@ -589,6 +613,23 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
  <!-- page script -->
  <script>
   $(function () {
+
+    $('.btn-send-comment').on('click', function(e){
+    e.preventDefault();
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Gửi nhận xét thành công!',
+      showConfirmButton: true,
+      timer: 1500
+    }).then((result) => {
+      if (result.value) {
+        window.location="ds_cong_viec_ca_nhan.html";
+      }
+    })
+
+    
+  })
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,

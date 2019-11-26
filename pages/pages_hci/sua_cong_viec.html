@@ -201,7 +201,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
                     <li><a href="ds_congviec_cty.html"><i class="fa fa-circle-o"></i>DS công việc CTY</a></li>
                     <li><a href="tao_du_an.html"><i class="fa fa-circle-o"></i> Tạo dự án</a></li>
                     <li><a href="chi_tiet_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết dự án</a></li>
-                    <li><a href="tao_congviec_du_an.html"><i class="fa fa-circle-o"></i>Tạo công việc trong dự án</a></li>
+                    <li><a href="tao_congviec_cty.html"><i class="fa fa-circle-o"></i>Tạo công việc trong dự án</a></li>
                     <li><a href="chi_tiet_cong_viec_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết công việc dự án</a></li>
                     <li><a href="tao_cong_viec_nhan_vien_du_an.html"><i class="fa fa-circle-o"></i>Tạo công việc cho nhân viên</a></li>
                     <li><a href="chi_tiet_cong_viec_nhan_vien_du_an.html"><i class="fa fa-circle-o"></i>Chi tiết công việc cho nhân viên</a></li>
@@ -244,7 +244,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Tạo công việc
+      Sửa công việc
       <small></small>
     </h1>
     <ol class="breadcrumb">
@@ -260,7 +260,6 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
     <!-- SELECT2 EXAMPLE -->
     <div class="box box-default">
       <div class="box-header with-border">
-        <h3 class="box-title">Tạo công việc phòng ban</h3>
 
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -274,7 +273,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
 
           <div class="form-group">
             <label>Tên công việc</label>
-            <input type="text" class="form-control" placeholder="Enter ...">
+            <input type="text" class="form-control" placeholder="Enter ..." value="Tính lương bộ phận nhân sự tháng 10-2019">
           </div>
           <div class="form-group">
             <label>Phòng ban phụ trách</label>
@@ -289,13 +288,13 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
           </div>
 
           <div class="form-group">
-            <label>Nhận xét:</label>
-            <textarea class="form-control" rows="5" placeholder="Nhận xét ..."></textarea>
+            <label>Mô tả:</label>
+            <textarea class="form-control" rows="5" placeholder="Nhận xét ...">Công việc cần làm xong sớm nha</textarea>
           </div>
           <div class="form-group">
                 <label>Quy trình</label>
                 <select class="form-control">
-                  <option>Quy trình 1</option>
+                  <option selected>Tính lương</option>
                   <option>Quy trình 2</option>
                   <option>Quy trình 3</option>
                   <option>Quy trình 4</option>
@@ -313,7 +312,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
               <div class="input-group-addon">
                 <i class="fa fa-calendar"></i>
               </div>
-              <input type="text" class="form-control pull-right" id="datepicker">
+              <input type="text" class="form-control pull-right" id="datepicker" value="11/25/2019">
             </div>
             <!-- /.input group -->
           </div>
@@ -324,7 +323,7 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
               <div class="input-group-addon">
                 <i class="fa fa-calendar"></i>
               </div>
-              <input type="text" class="form-control pull-right" id="datepicker">
+              <input type="text" class="form-control pull-right" id="datepicker" value="11/27/2019">
             </div>
             <!-- /.input group -->
           </div>
@@ -333,16 +332,16 @@ href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,30
             <label>Các phòng ban liên quan</label>
             <select class="form-control select2" multiple="multiple" data-placeholder="Chọn các phòng ban"
             style="width: 100%;">
-            <option>Phòng maketing</option>
+            <option >Phòng maketing</option>
             <option>Phòng kĩ thuật</option>
-            <option>Phòng nhân sự</option>
-            <option>Phòng tài chính</option>
+            <option selected>Phòng nhân sự</option>
+            <option selected>Phòng tài chính</option>
             <option>Phòng sản xuẩt</option>
             <option>Ban lãnh đạo</option>
           </select>
 
         <!-- /.col -->
-        <button type="button" class="btn btn-block btn-success btn-create">Tạo công việc</button>
+        <button type="button" class="btn btn-block btn-success btn-create">Cập nhật công việc</button>
       </div>
       <!-- /.row -->
     </div>
