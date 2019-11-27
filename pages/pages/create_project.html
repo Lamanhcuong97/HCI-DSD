@@ -302,20 +302,20 @@
           <div class="box">
             <!-- /.box-header -->
             <div class="box-body">
-            <form role="form">
+            <form role="form" id="form-create-project" action="http://3.1.20.54/v1/projects">
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Tên dự án</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                        <label for="name">Tên dự án</label>
+                        <input type="text" class="form-control" required id="name" name="name" placeholder="Tên dự án">
                     </div>
                     <div class="form-group">
                         <label>Người chịu trách nhiệm</label>
-                        <select class="form-control select2" style="width: 100%;">
-                            <option selected="selected">Lã Mạnh Cường</option>
-                            <option>Nguyễn Chí Thanh</option>
-                            <option>NGuyễn Duy Kỳ</option>
-                            <option>Trịnh Duy Hưng</option>   
-                            <option>Kerlor Senglao</option>
+                        <select class="form-control select2" required id="created_by" name="created_by" style="width: 100%;">
+                            <option selected="selected" value="Lã Mạnh Cường">Lã Mạnh Cường</option>
+                            <option value="Nguyễn Chí Thanh">Nguyễn Chí Thanh</option>
+                            <option value="Nguyễn Duy Kỳ">Nguyễn Duy Kỳ</option>
+                            <option value="Trịnh Duy Hưng">Trịnh Duy Hưng</option>   
+                            <option value="Kerlor Senglao">Kerlor Senglao</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -325,13 +325,13 @@
                               <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                               </div>
-                              <input type="text" class="form-control pull-right" id="datepicker">
+                              <input type="text" required class="form-control pull-right" autocomplete="off" name="deadline" id="datepicker">
                             </div>
                             <!-- /.input group -->
                           </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Mô tả</label>
-                        <textarea rows="4" cols="50" class="form-control"></textarea>
+                        <textarea rows="4" cols="50" required name="description" id="description" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputFile">Tài liệu</label>
@@ -395,22 +395,43 @@
  <!-- Page script -->
  <script>
   $(function () {
+
     $('.btn-create').on('click', function(e){
       e.preventDefault();
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Tạo dự án thành công',
-        showConfirmButton: true,
-        timer: 1500
-      }).then((result) => {
-        if (result.value) {
-          window.location="list_project.html";
-        }
-      })
 
+      // Các trường input cần được đặt name và id trùng với tên các trường của api
+      name = $('#name').val();
+      description = $('#description').val();
+      created_by = $('#created_by').val();
+      deadline = new Date($('#datepicker').val()).getTime()/1000;
       
-    })
+      console.log(deadline)
+      $.ajax({
+            url : "http://3.1.20.54/v1/projects", // link API
+            type : "post",
+            data: {
+                name: name,
+                description: description,
+                created_by: created_by,
+                deadline: deadline,
+                project_type: 0
+              }, // Phương thức POST
+            success : function (result){ // result là kết quả trả về khi gọi đến API
+              Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Tạo dự án thành công',
+                    showConfirmButton: true,
+                  }).then((result) => {
+                    // Chuyển hướng về  màn hình danh sách
+                      window.location="list_project.html";
+                  })
+            }
+                  
+          });
+            
+        });
+      
   });
     
     //Date picker

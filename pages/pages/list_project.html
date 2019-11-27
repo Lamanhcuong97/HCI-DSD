@@ -298,7 +298,7 @@
             <!-- /.box-header -->
             <div class="box-body">
               <a href="create_project.html" class="btn btn-success" style="margin: 10px 0 ;">Tạo dự án</a>
-              <table id="example1" class="table table-bordered table-striped">
+              <table id="table_projects" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>STT</th>
@@ -334,18 +334,7 @@
                             <button class="btn btn-danger">Xóa</button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Dự án cung cấp thuốc thú y cho tỉnh Hà Nam</td>
-                        <td>12/12/2019</td>
-                        <td>Lã Mạnh Cường</td>
-                        <td>Đang thực hiện</td>
-                        <td>
-                                <button class="btn btn-warning"><a href="detail_project.html">Chi tiết</a></button>
-                            <button class="btn btn-info">Sửa</button>
-                            <button class="btn btn-danger">Xóa</button>
-                        </td>
-                    </tr>
+                   
                 </tbody>
               </table>
             </div>
@@ -394,6 +383,44 @@
 <script src="../../dist/js/demo.js"></script>
 <!-- page script -->
 <script>
+
+function formatDate(date){
+  var dd = String(date.getDate()).padStart(2, '0');
+  var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = date.getFullYear();
+
+  date = mm + '/' + dd + '/' + yyyy;
+  return date;
+}
+
+
+// Đổ dữ liệu ra bảng project
+  $.ajax({
+              url : "http://3.1.20.54/v1/projects", // link API
+              type : "get", // Phương thức POST
+              success : function (result){ // result là kết quả trả về khi gọi đến API
+              console.log(result.results);
+                let list_project = result.results;
+                for (let index = 0; index < result.count ; index++) {
+                  // table_projects là id của thẻ table
+                  $('#table_projects tbody').append(` 
+                  <tr>
+                        <td>${index }</td>
+                        <td>${list_project[index].name }</td>
+                        <td>${formatDate(new Date(list_project[index].deadline))}</td>
+                        <td>${list_project[index].created_by }</td>
+                        <td>${list_project[index].status }</td>
+                        <td>
+                            <button class="btn btn-warning"><a href="http://3.1.20.54/v1/projects/${list_project[index].id}">Chi tiết</a></button>
+                            <button class="btn btn-info">Sửa</button>
+                            <button class="btn btn-danger">Xóa</button>
+                        </td>
+                    </tr>`);
+              }
+                  
+                }
+               
+          });
   $(function () {
     $('#example1').DataTable()
     $('#example2').DataTable({

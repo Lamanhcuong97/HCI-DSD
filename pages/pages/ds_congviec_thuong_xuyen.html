@@ -526,24 +526,27 @@
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script>
   $(function () {
+
+    // get ds công việc thường xuyên
     $.ajax({
-            url : "https://jsonplaceholder.typicode.com/todos/1", // link API
+            url : "https://falling-frog-38743.pktriot.net/api/recurrent-tasks/", // link API
             type : "get", // Phương thức POST
             success : function (result){ // result là kết quả trả về khi gọi đến API
-              let list_task = result.current_task;
-              $('#table_recurrent_task tbody').append(`
-                    <tr>
-                        <td>2</td>
-                        <td>${list_task.name_task}</td>
-                        <td>${list_task.department}</td>
-                        <td>${list_task.departments_related}</td>
-                        <td>${list_task.start_time}</td>
-                        <td>${list_task.deadline}</td>
-                        <td>
-                            <a href="link_edit/${list_task.id}"><button class="btn btn-info">Sửa</button></a>
-                            <button class="btn btn-danger btn-delete">Xóa</button>
-                        </td>
-                    </tr>`);
+            console.log(result);
+              // let list_task = result.current_task;
+              // $('#table_recurrent_task tbody').append(`
+              //       <tr>
+              //           <td>2</td>
+              //           <td>${list_task.name_task}</td>
+              //           <td>${list_task.department}</td>
+              //           <td>${list_task.departments_related}</td>
+              //           <td>${list_task.start_time}</td>
+              //           <td>${list_task.deadline}</td>
+              //           <td>
+              //               <a href="link_edit/${list_task.id}"><button class="btn btn-info">Sửa</button></a>
+              //               <button class="btn btn-danger btn-delete">Xóa</button>
+              //           </td>
+              //       </tr>`);
             }
         });
 
