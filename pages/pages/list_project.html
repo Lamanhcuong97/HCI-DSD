@@ -51,7 +51,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-  
+
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <!-- Notifications: style can be found in dropdown.less -->
@@ -81,7 +81,7 @@
                         <i class="fa fa-users text-red"></i> 5 new members joined
                       </a>
                     </li>
-  
+
                     <li>
                       <a href="#">
                         <i class="fa fa-shopping-cart text-green"></i> 25 sales made
@@ -107,7 +107,7 @@
                 <!-- User image -->
                 <li class="user-header">
                   <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-  
+
                   <p>
                     Lã Mạnh Cường <br> Trưởng phòng hành chính nhân sự
                     <small>Member since Nov. 2012</small>
@@ -139,7 +139,7 @@
                 </li>
               </ul>
             </li>
-            
+
           </ul>
         </div>
       </nav>
@@ -172,7 +172,7 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
-      
+
       <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Thống kê công việc</span>
@@ -369,7 +369,7 @@
   </footer>
 
   <!-- Control Sidebar -->
- 
+
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
@@ -395,7 +395,28 @@
 <!-- page script -->
 <script>
   $(function () {
-    $('#example1').DataTable()
+      $.ajax({
+          url: "https://jsonplaceholder.typicode.com/todos/1", // link API
+          type: "get", // Phương thức POST
+          success: function (result) { // result là kết quả trả về khi gọi đến API
+              // let list_task = result.current_task;
+              // $('#table_recurrent_task tbody').append(`
+              //       <tr>
+              //           <td>2</td>
+              //           <td>${list_task.name_task}</td>
+              //           <td>${list_task.department}</td>
+              //           <td>${list_task.departments_related}</td>
+              //           <td>${list_task.start_time}</td>
+              //           <td>${list_task.deadline}</td>
+              //           <td>
+              //               <a href="link_edit/${list_task.id}"><button class="btn btn-info">Sửa</button></a>
+              //               <button class="btn btn-danger btn-delete">Xóa</button>
+              //           </td>
+              //       </tr>`);
+          }
+      });
+
+      $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,
       'lengthChange': false,
